@@ -4,6 +4,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { DetailPage } from "./screens/Detail";
 import { HomePage } from "./screens/Home";
 import { SetUserName } from "./screens/SetUserName";
+import { Theme } from "./shared/themes/Theme";
 
 type TScreenDefinitions = {
 	home: undefined;
@@ -33,6 +34,9 @@ const RootStack = createNativeStackNavigator<TScreenDefinitions>({
 	},
 	screenOptions: {
 		headerShown: false,
+		contentStyle: {
+			backgroundColor: Theme.colors.background,
+		},
 	},
 	screenLayout: ({ children }) => <SafeAreaView>{children}</SafeAreaView>,
 });

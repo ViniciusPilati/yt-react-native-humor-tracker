@@ -16,7 +16,7 @@ export default function App() {
 		if (loaded || error) SplashScreen.hideAsync();
 	}, [loaded, error]);
 
-	if (!loaded && error) return null;
+	if (!loaded && !error) return null;
 
 	return <AppRoutes />;
 }
